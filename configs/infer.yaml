@@ -1,17 +1,18 @@
 project_path: .
-ddconfig_path: PLEASE FILL
-model_path: PLEASE FILL
-data_path: PLEASE FILL
+model_path: models/sequifier-default-best-100.onnx
+data_path: data/daily-min-temperatures-split2.parquet
 
-selected_columns: [EXAMPLE_INPUT_COLUMN_NAME] # should include all target column, can include additional columns
-target_columns: [EXAMPLE_TARGET_COLUMN_NAME]
-target_column_types:
-  EXAMPLE_TARGET_COLUMN_NAME: real
+ddconfig_path: configs/ddconfigs/daily-min-temperatures.json
+
+selected_columns: [Temp] # should include all target column, can include additional columns
+target_columns: [Temp]
+target_column_types: # 'criterion' in training_spec must also be adapted
+  Temp: real
 
 output_probabilities: false
 map_to_id: false
 device: cpu
-seq_length: 48
+seq_length: 50
 inference_batch_size: 10
 
-autoregression: true
+autoregression: false

@@ -1,0 +1,1 @@
+{"n_classes": {}, "id_maps": {}, "split_paths": ["./data/daily-min-temperatures-split0.parquet", "./data/daily-min-temperatures-split1.parquet", "./data/daily-min-temperatures-split2.parquet"], "column_types": {"Temp": "float64"}, "min_max_values": {"Temp": {"min": 0.0, "max": 26.3}}}
